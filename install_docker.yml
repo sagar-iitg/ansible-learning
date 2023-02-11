@@ -1,0 +1,17 @@
+
+
+-
+
+    name: This playbook will install docker
+    hosts: servers
+    become: yes
+    tasks:
+      - name: installing  Docker
+        apt:
+          name: docker.io
+          state: latest
+        
+
+      
+
+

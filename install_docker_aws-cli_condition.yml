@@ -1,0 +1,22 @@
+
+
+-
+
+    name: This playbook will install docker
+    hosts: servers
+    become: yes
+    tasks:
+      - name: installing  Docker
+        apt:
+          name: nginx
+          state: latest
+        when: ansible_distribution == 'CentOS' or  ansible_distribution == 'Red Hat Enterprise Linux'
+      - name: installing aws cli 
+        apt:
+          name: awscli
+          state: latest
+        when: ansible_distribution == 'Debian' or  ansible_distribution == 'Ubuntu'
+
+      
+
+

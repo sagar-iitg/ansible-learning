@@ -50,6 +50,15 @@ ansible servers -a "uptime"
 
 
 ```
+ansible-playbook deploy_webpage.yaml 
+ansible-playbook -i /etc/ansible/hosts deploy_webpage.yaml 
+ansible-playbook -i /home/ubuntu/ansible/inventories/prod_inv deploy_webpage.yaml 
+
+```
+
+
+
+```
 
 ansible 
 
